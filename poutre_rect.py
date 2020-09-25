@@ -1,4 +1,6 @@
+import math
 # Initialisation des variables
+
 
 F = 10000  # en N
 E = 210  # en GPa = 10^3 N/mm^2
@@ -8,9 +10,10 @@ h = 20  # en mm
 
 # Calcul de l'inertie
 
-I = 
+I = (b*(h**3))/12
 
 # Calcul de la déformation maximale
 
-delta_max = 
+delta_max = float(F*(L**3)/(3*E*I))
 
+print('delta max égale',delta_max,'mm')
